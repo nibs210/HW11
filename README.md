@@ -11,6 +11,8 @@ The goal of my project is to create a processing sketch that can take a model, m
 
 This project relies heavily on the HE_mesh library, which has hundreds and hundreds of different components. on top of that, i'm also including 3D printing, which is its own field full of challenges on its own.
 
+The way the program works: HE_mesh has a library named RnadomRay. unfortunately all libraries are packaged in Java, so i'm unable to crack them open and study their base code (spent 4 hours trying, though). What RandomRay does, from the best i can tell, is in the first frame of the render, it detects the rendered light source, and sees what vertices of the 3D model are being hit by the light source. any vertice on the 3D model that isn't being lit up by the light is added to the preset amount of vertices that it's allowed to change. it then pulls the vertices away from the model by a randomized amount, and then after 300 frames the library WB_AABBTree takes over, and smoothes all the vertices out, creating a brand new 3D model. after that, i programmed a quick void command that saves the new mesh as a .obj whenever the mouse is clicked inside the render. the new file is named based on the current date/time, and deposited in the same folder that the processing sketch is located.
+
 ## Challenges
 
 The HE_mesh library is INCREDIBLY diverse and extensive, and often hard to really grasp. that, combined with some spotty memory about the older, re-used parts of the project has led to a lot of confusion and difficulty getting it to work.
@@ -26,7 +28,7 @@ What did you do in each of the past four weeks?
 
 ## Completed Work
 
-Photos and videos of your completed final project!
+https://imgur.com/a/shlqTZ9
 
 ## References and links
 
